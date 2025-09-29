@@ -1,0 +1,93 @@
+/* --- المتغيرات اللونية والأساسيات --- */
+:root {
+    --sky-blue: #87CEEB;
+    --aqua-glass: rgba(224, 255, 255, 0.8); /* أزرق مائي زجاجي */
+    --text-color: #2c3e50; /* أزرق داكن ناعم بدلاً من الأسود الصريح */
+    --link-color: #3498db; /* أزرق سماوي أفتح للروابط */
+    --background-image: url('your-background-image-url.png'); /* !! غيّر هذا الرابط !! */
+}
+
+body {
+    font-family: 'Tahoma', 'Geneva', sans-serif; /* خط كلاسيكي من عصر Frutiger Aero */
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: var(--sky-blue); /* لون احتياطي */
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* يجعل الخلفية ثابتة عند التمرير */
+}
+
+/* --- حاوية المحتوى الرئيسية --- */
+main {
+    max-width: 700px;
+    margin: 4rem auto; /* توسيط المحتوى مع هوامش علوية وسفلية */
+    padding: 2rem;
+    background-color: var(--aqua-glass);
+    border-radius: 15px; /* حواف دائرية ناعمة */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1); /* ظل خفيف جداً */
+    backdrop-filter: blur(10px); /* التأثير الزجاجي السحري */
+    -webkit-backdrop-filter: blur(10px); /* لدعم متصفح سفاري */
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* --- الترويسة والتذييل --- */
+header, footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: white;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* --- المقالات --- */
+article {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+}
+
+article:last-child {
+    border-bottom: none; /* لا نريد خطًا تحت آخر مقال */
+}
+
+article h2 a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: normal;
+}
+
+.metadata {
+    font-size: 0.9rem;
+    color: #34495e;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+}
+
+/* --- الروابط --- */
+a {
+    color: var(--link-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #5dade2;
+}
+
+footer a {
+    color: white;
+}
